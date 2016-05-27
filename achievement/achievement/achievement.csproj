@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -19,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,7 +59,72 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\achievements\achievements-list.cmp.js" />
+    <Content Include="app\app.component.js" />
+    <Content Include="app\header\header.cmp.html" />
+    <Content Include="app\header\header.cmp.js" />
+    <Content Include="app\main.js" />
+    <Content Include="node_modules\ng2-bootstrap\.config\bundle-system.js" />
+    <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.js" />
+    <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.min.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\accordion.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\accordion\accordion-group.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\accordion\accordion.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\alert.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\alert\alert.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\buttons.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\buttons\button-checkbox.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\buttons\button-radio.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\carousel.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\carousel\carousel.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\carousel\slide.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\collapse.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\collapse\collapse.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\common.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\date-formatter.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\datepicker-inner.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\datepicker-popup.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\datepicker.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\daypicker.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\monthpicker.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\yearpicker.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\dropdown.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\dropdown\dropdown-menu.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\dropdown\dropdown-toggle.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\dropdown\dropdown.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\dropdown\dropdown.service.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\ng2-bootstrap-config.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\pagination.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\pagination\pager.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\pagination\pagination.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\position.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\progressbar.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\progressbar\bar.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\progressbar\progress.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\progressbar\progressbar.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\rating.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\rating\rating.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\tabs.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\tabs\tab-heading.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\tabs\tab.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\tabs\tabset.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\timepicker.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\timepicker\timepicker.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\tooltip.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\tooltip\tooltip-container.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\tooltip\tooltip-options.class.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\tooltip\tooltip.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\typeahead.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\typeahead\latin-map.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\typeahead\typeahead-container.component.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\typeahead\typeahead-options.class.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\typeahead\typeahead-utils.js" />
+    <Content Include="node_modules\ng2-bootstrap\components\typeahead\typeahead.directive.js" />
+    <Content Include="node_modules\ng2-bootstrap\gulpfile.js" />
+    <Content Include="node_modules\ng2-bootstrap\ng2-bootstrap.js" />
     <Content Include="package.json" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="tsconfig.json" />
     <Content Include="typings.json" />
     <Content Include="node_modules\%40angular\common\esm\index.js.map" />
@@ -4738,6 +4805,54 @@
     <Content Include="typings\globals\jasmine\typings.json" />
     <Content Include="typings\globals\node\typings.json" />
     <Content Include="app\achievements\achievement-list.cmp.html" />
+    <Content Include="app\main.js.map" />
+    <Content Include="app\app.component.js.map" />
+    <Content Include="app\achievements\achievements-list.cmp.js.map" />
+    <Content Include="packages.config" />
+    <Content Include="app\header\header.cmp.js.map" />
+    <Content Include="node_modules\ng2-bootstrap\.editorconfig" />
+    <Content Include="node_modules\ng2-bootstrap\.eslintrc.json" />
+    <Content Include="node_modules\ng2-bootstrap\.npmignore" />
+    <Content Include="node_modules\ng2-bootstrap\.travis.yml" />
+    <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.js.gz" />
+    <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.js.map.gz" />
+    <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.min.js.gz" />
+    <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.min.js.map.gz" />
+    <Content Include="node_modules\ng2-bootstrap\CHANGELOG.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\accordion\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\accordion\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\alert\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\alert\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\buttons\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\buttons\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\carousel\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\carousel\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\collapse\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\collapse\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\datepicker\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\dropdown\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\dropdown\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\pagination\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\pagination\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\progressbar\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\progressbar\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\rating\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\rating\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\tabs\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\tabs\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\timepicker\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\timepicker\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\tooltip\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\tooltip\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\typeahead\readme.md" />
+    <Content Include="node_modules\ng2-bootstrap\components\typeahead\title.md" />
+    <Content Include="node_modules\ng2-bootstrap\LICENSE" />
+    <Content Include="node_modules\ng2-bootstrap\package.json" />
+    <Content Include="node_modules\ng2-bootstrap\README.md" />
+    <Content Include="node_modules\ng2-bootstrap\tsconfig.json" />
+    <Content Include="node_modules\ng2-bootstrap\tslint.json" />
+    <Content Include="node_modules\ng2-bootstrap\typings.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -16948,12 +17063,82 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="app\header\header.cmp.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\accordion.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\accordion\accordion-group.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\accordion\accordion.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\alert.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\alert\alert.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\buttons.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\buttons\button-checkbox.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\buttons\button-radio.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\carousel.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\carousel\carousel.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\carousel\slide.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\collapse.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\collapse\collapse.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\common.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\datepicker.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\datepicker\date-formatter.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\datepicker\datepicker-inner.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\datepicker\datepicker-popup.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\datepicker\datepicker.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\datepicker\daypicker.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\datepicker\monthpicker.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\datepicker\yearpicker.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\dropdown.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\dropdown\dropdown-menu.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\dropdown\dropdown-toggle.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\dropdown\dropdown.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\dropdown\dropdown.service.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\ng2-bootstrap-config.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\pagination.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\pagination\pager.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\pagination\pagination.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\position.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\progressbar.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\progressbar\bar.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\progressbar\progress.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\progressbar\progressbar.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\rating.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\rating\rating.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\tabs.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\tabs\tab-heading.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\tabs\tab.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\tabs\tabset.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\timepicker.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\timepicker\timepicker.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\tooltip.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\tooltip\tooltip-container.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\tooltip\tooltip-options.class.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\tooltip\tooltip.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\typeahead.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\typeahead\latin-map.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\typeahead\typeahead-container.component.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\typeahead\typeahead-options.class.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\typeahead\typeahead-utils.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\components\typeahead\typeahead.directive.d.ts" />
+    <TypeScriptCompile Include="node_modules\ng2-bootstrap\ng2-bootstrap.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

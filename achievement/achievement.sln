@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio Express 2013 for Web
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "achievement", "achievement\achievement.csproj", "{82FC7683-2B33-4BF4-8813-760B652EA347}"
 EndProject
@@ -10,6 +10,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9C06B98B-2002-4F22-9E1F-53E7BF7795BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{82005D8E-57B8-491C-BB41-E5C2A2130D1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B7667221-9500-459F-AC55-EAE3BF79C4DE}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{A2154A75-E592-423F-BC00-38F67445BE0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Achievements.Dal", "Achievements.Dal\Achievements.Dal.csproj", "{F1B8DCF7-1F4A-482D-B9E0-F55AFA203187}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Achievements.BL", "Achievements.BL\Achievements.BL.csproj", "{7480B91E-1AD7-4B01-804B-34F5479CECE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,11 +40,26 @@ Global
 		{82005D8E-57B8-491C-BB41-E5C2A2130D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82005D8E-57B8-491C-BB41-E5C2A2130D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82005D8E-57B8-491C-BB41-E5C2A2130D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2154A75-E592-423F-BC00-38F67445BE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2154A75-E592-423F-BC00-38F67445BE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2154A75-E592-423F-BC00-38F67445BE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2154A75-E592-423F-BC00-38F67445BE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B8DCF7-1F4A-482D-B9E0-F55AFA203187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B8DCF7-1F4A-482D-B9E0-F55AFA203187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B8DCF7-1F4A-482D-B9E0-F55AFA203187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B8DCF7-1F4A-482D-B9E0-F55AFA203187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7480B91E-1AD7-4B01-804B-34F5479CECE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7480B91E-1AD7-4B01-804B-34F5479CECE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7480B91E-1AD7-4B01-804B-34F5479CECE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7480B91E-1AD7-4B01-804B-34F5479CECE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{82005D8E-57B8-491C-BB41-E5C2A2130D1C} = {9C06B98B-2002-4F22-9E1F-53E7BF7795BB}
+		{A2154A75-E592-423F-BC00-38F67445BE0A} = {9C06B98B-2002-4F22-9E1F-53E7BF7795BB}
+		{F1B8DCF7-1F4A-482D-B9E0-F55AFA203187} = {9C06B98B-2002-4F22-9E1F-53E7BF7795BB}
+		{7480B91E-1AD7-4B01-804B-34F5479CECE8} = {9C06B98B-2002-4F22-9E1F-53E7BF7795BB}
 	EndGlobalSection
 EndGlobal
