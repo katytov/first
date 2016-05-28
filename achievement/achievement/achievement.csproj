@@ -60,9 +60,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\achievements\achievements-list.cmp.js" />
+    <Content Include="app\admin\grant-achievements.cmp.html" />
+    <Content Include="app\admin\grant-achievements.cmp.js" />
+    <Content Include="app\admin\grant-achievements.cmp.ts" />
+    <Content Include="app\admin\upload-achievements.cmp.html" />
+    <Content Include="app\admin\upload-achievements.cmp.js" />
+    <Content Include="app\admin\upload-achievements.cmp.ts" />
     <Content Include="app\app.component.js" />
+    <Content Include="app\contact\contact.cmp.html" />
+    <Content Include="app\contact\contact.cmp.js" />
+    <Content Include="app\contact\contact.cmp.ts" />
     <Content Include="app\header\header.cmp.html" />
     <Content Include="app\header\header.cmp.js" />
+    <Content Include="app\home\home.cmp.html" />
+    <Content Include="app\home\home.cmp.js" />
+    <Content Include="app\home\home.cmp.ts" />
     <Content Include="app\main.js" />
     <Content Include="node_modules\ng2-bootstrap\.config\bundle-system.js" />
     <Content Include="node_modules\ng2-bootstrap\bundles\ng2-bootstrap.js" />
@@ -4853,6 +4865,10 @@
     <Content Include="node_modules\ng2-bootstrap\tsconfig.json" />
     <Content Include="node_modules\ng2-bootstrap\tslint.json" />
     <Content Include="node_modules\ng2-bootstrap\typings.json" />
+    <Content Include="app\admin\grant-achievements.cmp.js.map" />
+    <Content Include="app\admin\upload-achievements.cmp.js.map" />
+    <Content Include="app\contact\contact.cmp.js.map" />
+    <Content Include="app\home\home.cmp.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

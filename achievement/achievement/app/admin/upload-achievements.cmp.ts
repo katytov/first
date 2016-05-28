@@ -5,4 +5,6 @@ import {Component} from '@angular/core';
     templateUrl: 'app/admin/upload-achievements.cmp.html'
 })
 
-export class UploadAchievementsComponent{}
+export class UploadAchievementsComponent{
+	pageTitle: string = 'Create a Prize set'
+}
