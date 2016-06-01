@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var UploadAchievementsComponent = (function () {
     function UploadAchievementsComponent() {
+        this.pageTitle = 'Create a Prize set';
     }
     UploadAchievementsComponent = __decorate([
         core_1.Component({

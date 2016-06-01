@@ -5,4 +5,6 @@ import {Component} from '@angular/core';
     templateUrl: 'app/home/home.cmp.html'
 })
 
-export class HomeComponent{}
+export class HomeComponent{
+    pageTitle: string = "Log in"
+}
